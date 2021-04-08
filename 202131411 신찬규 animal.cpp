@@ -30,13 +30,25 @@ int main()
         };
     int main()
     {
-        Animal* pa = new Dog;
-        Animal* pb = new Bird;
-        pa->Cry();
-        pb->Cry();
-        Dog* pd = (Dog*)pa;
-        pd->Cry();
-        return 0;
+            Animal* arr[6];
+    arr[0] = new Dog;
+    arr[1] = new Dog;
+    arr[2] = new Bird;
+    arr[3] = new Bird;
+    arr[4] = new Cat;
+    arr[5] = new Cat;
+    Animal* Animal_pointer = *arr;
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 1);
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 2);
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 3);
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 4);
+    Animal_pointer->Cry();
+    Animal_pointer = *(arr + 5);
+    Animal_pointer->Cry();
     }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
